@@ -1,0 +1,245 @@
+/*--> General Styles <--*/
+* { box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;   
+    background: white;
+    font-weight: bold;
+    font-family: 'Marvel', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*--> General Div Styles <--*/
+.container {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}.search > div {
+    width: 100%;
+    height: 33.3%;
+}
+
+/*--> Inside Search Section Styles <--*/
+/*-> Header <-*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_img, .title {
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+
+.header > h1 {
+    padding: 0px;
+    margin: 0px;
+    text-shadow: deeppink 2px 2px;
+}
+
+/*-> Content <-*/
+.content {
+    margin: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} .content > div {
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-> Footer <-*/
+.footer {
+    font-size: 0.6em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.icon {
+    color: black;
+    padding: 0.5em;
+}
+
+/*--> Header Styles <--*/
+h1, h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*--> Input Styles <--*/
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(#000,.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0,0,0);
+    transition: all .2s ease;
+    pointer-events: none;
+}   
+
+.focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000,.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+  .inp > input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(#000,.02);
+    box-shadow: inset 0 -1px 0 rgba(#000,.3);
+    border-radius: 15px;
+    color: #000;
+    transition: all .15s ease;
+}
+
+    .inp > input:hover {
+      background: rgba(#000,.04);
+      box-shadow: inset 0 -1px 0 rgba(#000,.5);
+    }
+    
+    .inp > input:not(:placeholder-shown) 
+      + .label {
+        color: rgba(#000,.5);
+        transform: translate3d(0,-12px,0) scale(.75);
+    }
+    
+    .inp > input:focus {
+      background: rgba(#000,.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 #0464ff;
+    } .inp > input:focus + .label {
+        color: #0464ff;
+        transform: translate3d(0,-12px,0) scale(.75);
+
+        background: rgba(#000,.05);
+        outline: none;
+        box-shadow: inset 0 -2px 0 #0464ff;
+      } .inp > input:focus + .focus-bg {
+          transform: scaleX(1);
+          transition: all .1s ease;
+
+          background: rgba(#000,.05);
+          outline: none;
+          box-shadow: inset 0 -2px 0 #0464ff;
+        }
+
+/*--> Button Style <--*/
+.button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #0464ff;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .1s ease-in-out; }
+    .button:hover {
+      background-color: deeppink;
+      border-color: #fff;
+      transition: all .1s ease-in-out;
+}
+
+/*--> Estilos para pantallas con anchura superior a 576px <--*/
+
+
+/*--> Estilos para pantallas con anchura superior a 992px <--*/
+@media screen and (min-width: 992px) {
+
+/*-> GENERAL STYLES <-*/
+html,body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {height: 100%;}
+
+.search {height: 100%;}
+ 
+/*-> HEADER <-*/
+h1 {font-size: 3.5em;}
+
+img {
+    width: 15%;
+    height: auto;
+    padding: 5px;
+}
+/*-> CONTENT <-*/
+.content {margin:0px;}
+.inp {max-width: 50%;} 
+.button {width: 30%;}
+
+/*-> FOOTER <-*/
+.footer > h2{font-size: 3em;} 
+.icons {font-size: 2em;}
+}
