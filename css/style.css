@@ -97,13 +97,6 @@ img {
     padding: 0.5em;
 }
 
-/*--> Header Styles <--*/
-h1, h2 {
-    font-size: 2.5em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 /*--> Input Styles <--*/
 .inp {
     position: relative;
@@ -170,6 +163,7 @@ h1, h2 {
     
     .inp > input:focus {
       background: rgba(#000,.05);
+      border: 1px solid #0464ff;
       outline: none;
       box-shadow: inset 0 -2px 0 #0464ff;
     } .inp > input:focus + .label {
